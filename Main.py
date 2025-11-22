@@ -5,12 +5,12 @@ from sklearn.linear_model import LinearRegression
 data = pd.read_csv("data.csv")
 
 #  Separate features (X) and target (y)
-X = data[["area", "bedrooms", "age"]]
+x = data[["area", "bedrooms", "age"]]
 y = data["price"]
 
 #  Create and train the model
 model = LinearRegression()
-model.fit(X, y)
+model.fit(x, y)
 
 #  Make a prediction
 predicted_price = model.predict([[3300, 3, 15]])
